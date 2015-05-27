@@ -1,3 +1,5 @@
+// Clean Array
+
 function squeakyClean(arr) {
 	
 	for (var i=0; i < arr.length; i++) {

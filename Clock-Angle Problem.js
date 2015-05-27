@@ -1,3 +1,5 @@
+// Calculate Angle
+
 function calculateAngle(hour, minute) {
     if (hour === 12 && minute === 0) {
         return 0;
