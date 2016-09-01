@@ -1,5 +1,6 @@
 Array.prototype.all = function (p) {
   // TODO: Implement this function
+  if( this.length != 0 ){
   for (var i=0; i < this.length; i++) {
   	if (i == ((this.length)-1)) {
   		if(p(this[i])) {
@@ -15,14 +16,18 @@ Array.prototype.all = function (p) {
   	}
   }
   return null;
-};
+}
+else{
+  return true;
+}
 
 
 
 
 Array.prototype.none = function (p) {
   // TODO: Implement this function
-  for (var i=0; i < this.length; i++) {
+  if( this.length != 0 ){
+     for (var i=0; i < this.length; i++) {
   	if (i == ((this.length)-1)) {
   		if(p(this[i])) {
   			return false;
@@ -37,13 +42,18 @@ Array.prototype.none = function (p) {
   	}
   }
   return null;
+  }
+ else {
+  return true;
+ }
 };
 
 
 
 Array.prototype.any = function (p) {
   // TODO: Implement this function
-  for (var i=0; i < this.length; i++) {
+  if( this.length != 0 ){
+      for (var i=0; i < this.length; i++) {
   	if (i == ((this.length)-1)) {
   		if(p(this[i])) {
   			return true;
@@ -58,6 +68,10 @@ Array.prototype.any = function (p) {
   	}
   }
   return null;
+  }
+  else{
+    return false;
+  }
 };
 
 
